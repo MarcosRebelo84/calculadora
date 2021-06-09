@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+function limpar() {
+document.getElementById('visor').value ='';
+}
+function unir(valor){
+document.getElementById('visor').value += valor;
+}
+function calcular(){
+var resultado = 0;
+resultado = document.getElementById('visor').value;
+document.getElementById('visor').value = eval(resultado);
+        }
+</script>
+
+</head>
+   
+
+<body style="background: rgb(129, 199, 199);">
+   
+
+<h1 style="text-align: center;font;"><u>Calculadora</u></h1>
+
+
+    
+<div class="calculadora" style="text-align: center;">
+<div class="visor">
+<input type="text" id="visor">
+</div>
+<br>
+<div class="botao">
+    
+<input type="submit" value="1" onclick="unir(1);" style="font-size: 20px;"> 
+<input type="submit" value="2" onclick="unir(2);" style="font-size: 20px;">
+<input type="submit" value="3" onclick="unir(3);" style="font-size: 20px;">
+<input type="submit" value="4" onclick="unir(4);" style="font-size: 20px;">
+<input type="submit" value="5" onclick="unir(5);" style="font-size: 20px;">
+</div>
+<div>
+
+<input type="submit" value="6" onclick="unir(6);" style="font-size: 20px;">
+<input type="submit" value="7" onclick="unir(7);" style="font-size: 20px;">
+<input type="submit" value="8" onclick="unir(8);" style="font-size: 20px;">
+<input type="submit" value="9" onclick="unir(9);" style="font-size: 20px;">
+<input type="submit" value="0" onclick="unir(0);" style="font-size: 20px;">
+
+</div>
+    
+<div>
+<input type="submit" value="+" onclick="unir('+');" style="font-size: 20px;">
+<input type="submit" value="-" onclick="unir('-');" style="font-size: 20px;">
+<input type="submit" value="/" onclick="unir('/');" style="font-size: 20px;">
+<input type= "submit" value="*" onclick="unir('*');" style="font-size: 20px;">
+<input type= "submit" value="=" class="igual" onclick="calcular();" style="font-size: 20px;">
+<input type="submit" value="C" onclick="limpar();" style="font-size: 20px;">
+
+   
+</body>
+</html>
